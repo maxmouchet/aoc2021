@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def count_increases(values, *, window):
     """
     >>> values = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
@@ -19,11 +20,13 @@ def count_increases(values, *, window):
                 increases += 1
     return increases - 1
 
+
 def main():
-    with open("day1.txt") as f:
+    with open("inputs/day1.txt") as f:
         print(count_increases((int(line) for line in f), window=1))
-    with open("day1.txt") as f:
+        f.seek(0)
         print(count_increases((int(line) for line in f), window=3))
+
 
 if __name__ == "__main__":
     main()
