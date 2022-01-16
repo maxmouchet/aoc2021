@@ -1,5 +1,7 @@
 from collections import deque
 
+from aoc2021 import INPUTS
+
 
 def count_increases(values, *, window):
     """
@@ -22,7 +24,7 @@ def count_increases(values, *, window):
 
 
 def main():
-    with open("inputs/day1.txt") as f:
+    with (INPUTS / "day1.txt").open() as f:
         print(count_increases((int(line) for line in f), window=1))
         f.seek(0)
         print(count_increases((int(line) for line in f), window=3))

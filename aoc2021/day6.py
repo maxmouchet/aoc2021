@@ -1,3 +1,6 @@
+from aoc2021 import INPUTS
+
+
 def simulate(timers, *, days):
     """
     >>> sum(simulate([3,4,3,1,2], days=18))
@@ -17,7 +20,7 @@ def simulate(timers, *, days):
 
 
 def main():
-    with open("inputs/day6.txt") as f:
+    with (INPUTS / "day6.txt").open() as f:
         timers = [int(x) for x in next(f).split(",")]
     print(sum(simulate(timers, days=80)))
     print(sum(simulate(timers, days=256)))

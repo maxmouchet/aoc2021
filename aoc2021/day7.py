@@ -1,5 +1,7 @@
 import math
 
+from aoc2021 import INPUTS
+
 
 def evaluate(positions, target, *, weighted):
     """
@@ -29,7 +31,7 @@ def minimize(positions, *, weighted):
 
 
 def main():
-    with open("inputs/day7.txt") as f:
+    with (INPUTS / "day7.txt").open() as f:
         positions = [int(x) for x in next(f).split(",")]
     print(minimize(positions, weighted=False))
     print(minimize(positions, weighted=True))

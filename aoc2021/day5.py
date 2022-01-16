@@ -1,5 +1,7 @@
 from collections import defaultdict
 
+from aoc2021 import INPUTS
+
 
 def count_intersections(lines, *, with_diagonals):
     """
@@ -28,7 +30,7 @@ def count_intersections(lines, *, with_diagonals):
 
 
 def main():
-    with open("inputs/day5.txt") as f:
+    with (INPUTS / "day5.txt").open() as f:
         lines = []
         for line in f:
             lines.append(

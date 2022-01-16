@@ -1,5 +1,7 @@
 from collections import defaultdict
 
+from aoc2021 import INPUTS
+
 
 def most_common_bits(values):
     """
@@ -59,7 +61,7 @@ def decode_rating(values):
 
 
 def main():
-    with open("inputs/day3.txt") as f:
+    with (INPUTS / "day3.txt").open() as f:
         gamma, epsilon = decode_rate(f)
         print(gamma * epsilon)
         f.seek(0)

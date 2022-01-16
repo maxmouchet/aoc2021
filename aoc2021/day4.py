@@ -1,5 +1,7 @@
 import math
 
+from aoc2021 import INPUTS
+
 BOARD_1 = [
     [22, 13, 17, 11, 0],
     [8, 2, 23, 4, 24],
@@ -81,7 +83,7 @@ def find_loosing_board(boards, numbers):
 
 
 def main():
-    with open("inputs/day4.txt") as f:
+    with (INPUTS / "day4.txt").open() as f:
         numbers = [int(x) for x in next(f).split(",")]
         boards = []
         for line in f:

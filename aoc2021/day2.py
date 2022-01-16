@@ -1,3 +1,6 @@
+from aoc2021 import INPUTS
+
+
 def compute_position(commands, *, with_aim):
     """
     >>> commands = ["forward 5", "down 5", "forward 8", "up 3", "down 8", "forward 2"]
@@ -22,7 +25,7 @@ def compute_position(commands, *, with_aim):
 
 
 def main():
-    with open("inputs/day2.txt") as f:
+    with (INPUTS / "day2.txt").open() as f:
         horizontal, depth = compute_position(f, with_aim=False)
         print(horizontal * depth)
         f.seek(0)
